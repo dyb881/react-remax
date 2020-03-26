@@ -1,0 +1,40 @@
+{
+  "name": "react-remax",
+  "private": true,
+  "version": "1.0.0",
+  "description": "基于 remaxjs 进行封装，用最少代码实现跨平台封装",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Caihuanyu <eterlf41@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax build -w -t",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production remax build -t"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.1",
+    "less": "^3.11.1",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.1.8",
+    "rc-field-form": "^1.1.1",
+    "react": "^16.8.6",
+    "remax": "^1.1.0",
+    "remax-cli": "^1.1.0",
+    "rimraf": "^2.6.3"
+  },
+  "devDependencies": {
+    "chokidar": "^2.1.8"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "parser": "babylon",
+    "semi": true,
+    "requirePragma": false
+  }
+}
