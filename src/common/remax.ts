@@ -33,15 +33,59 @@ export const {
   Image,
   Button,
   Input,
-  // API
+  Textarea,
+  Picker,
+  PickerView,
+  PickerViewColumn,
+  ScrollView,
+  Icon,
+  Switch,
+  // 基础
+  getUpdateManager,
+  getSystemInfo,
+  hideHomeButton,
+  // 网络
   request,
   uploadFile,
+  // 数据缓存
+  setStorage,
+  getStorage,
+  // 路由
+  switchTab,
+  reLaunch,
   navigateTo,
+  redirectTo,
   setNavigationBarTitle,
-  makePhoneCall,
+  navigateBack,
+  // 媒体
+  previewImage,
+  chooseImage,
+  // 界面
   showToast,
   hideToast,
   showLoading,
   hideLoading,
-  previewImage,
+  showModal,
+  // 文件
+  getFileSystemManager,
+  // 开放接口
+  login,
+  requestPayment,
+  // 设备
+  makePhoneCall,
+  setClipboardData,
+  // hooks
+  useAppEvent,
+  usePageEvent,
+  useQuery,
+  //消息订阅
+  requestSubscribeMessage,
 } = currentRemax;
+
+export const toast = (title: string, duration = 1000) => {
+  return showToast({ title, duration, icon: 'none' });
+};
+
+export const loading = (title = '') => {
+  showLoading({ title });
+};
