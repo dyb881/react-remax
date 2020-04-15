@@ -1,6 +1,6 @@
 # react-remax
 
-基于 remaxjs 进行封装，用最少代码实现跨平台封装
+基于 remaxjs + Typescript + Mobx + Less 进行封装，用最少代码实现跨平台封装
 
 ## src 目录结构
 
