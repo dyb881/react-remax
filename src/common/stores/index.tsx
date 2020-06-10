@@ -1,12 +1,11 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import user from './user';
-import view from './view';
 
 /**
  * 全局状态
  */
-export const stores = { user, view };
+export const stores = { user };
 
 /**
  * 状态类型
@@ -21,6 +20,6 @@ export const combine = <P extends object>(Component: React.FC<P & TStores>) => {
   // 生成观察者组件
   const Observer = observer(Component);
   // 注入全局状态
-  const Combine: React.FC<P> = props => <Observer {...props} stores={stores} />;
+  const Combine: React.FC<P> = (props) => <Observer {...props} stores={stores} />;
   return Combine;
 };

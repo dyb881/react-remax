@@ -1,12 +1,22 @@
-import React from 'react';
-import { observable, when } from 'mobx';
+import { observable, action, when } from 'mobx';
 
-const user = observable({
+/**
+ * 用户
+ */
+const store = observable({
   isLogin: false,
   onLogin: (bind: boolean | (() => void)) => {
-    if (typeof bind === 'boolean') user.isLogin = bind;
-    else when(() => user.isLogin, bind);
+    if (typeof bind === 'boolean') {
+      this.isLogin = bind;
+    } else {
+      when(() => this.isLogin, bind);
+    }
+  },
+
+  total: 1,
+  add() {
+    store.total++;
   },
 });
 
-export default user;
+export default store;
