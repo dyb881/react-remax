@@ -1,0 +1,117 @@
+/*
+  主题色
+  '@rr-p': '#1890ff', // 全局主色
+  '@rr-s': '#52c41a', // 成功色
+  '@rr-w': ' #faad14', // 警告色
+  '@rr-e': '#f5222d', // 错误色
+  '@rr-fs': '14px', // 主字号
+  '@rr-c': 'rgba(0, 0, 0, 0.85)', // 主文本色
+  '@rr-cs': 'rgba(0, 0, 0, .45)', // 次文本色
+  '@rr-dc': 'rgba(0, 0, 0, .25)', // 失效色
+  '@rr-dcb': 'rgba(0, 0, 0, .05)', // 失效背景色
+  '@rr-bc': '#eeeeee', // 边框色
+  '@rr-bcd': '#cccccc', // 边框色-深色
+  '@rr-b': '#f1f1f1', // 背景色
+*/
+body,
+page {
+  line-height: 1;
+}
+
+// 填满
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// 上下对其
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+// 内容居中
+.center {
+  .align-center;
+  justify-content: center;
+}
+
+// 间隔均分
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+
+// 间隔均分 并上下居中
+.between-center {
+  .between;
+  align-items: center;
+}
+
+// 纵向排列
+.column {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+// 纵向居中
+.column-center {
+  .center;
+  flex-direction: column;
+}
+
+// 根标签
+#root {
+  .fill;
+  overflow: hidden;
+  font-style: @rr-fs;
+  line-height: 1;
+  background-color: @rr-b;
+}
+
+.transition {
+  transition: all 0.3s;
+}
+
+.overflow {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/**
+ * 常用字颜色
+ */
+
+.primary,
+.edit {
+  color: @rr-p;
+}
+
+.success {
+  color: @rr-s;
+}
+
+.warning {
+  color: @rr-w;
+}
+
+.error,
+.delete {
+  color: @rr-e;
+}
+
+.secondary {
+  color: @rr-cs;
+}
+
+.disabled {
+  color: @rr-dc;
+}
