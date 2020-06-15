@@ -12,11 +12,6 @@ const store = observable({
       when(() => this.isLogin, bind);
     }
   },
-
-  total: 1,
-  add() {
-    store.total++;
-  },
 });
 
 export default store;
