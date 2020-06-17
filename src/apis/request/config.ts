@@ -1,5 +1,6 @@
 import { TFetchRequestConfig, TConfig } from '@dyb881/fetch-request';
 import { requestFunction } from './function';
+import { toast } from '@/common';
 
 /**
  * 是否生产环境
@@ -36,7 +37,7 @@ export const requestConfig: TFetchRequestConfig = {
     return config;
   },
   interceptorsResponse: (res, config) => {
-    // res.ok || config.noToast || toast(res.errorText);
+    res.ok || config.noToast || toast.info(res.errorText);
     return res;
   },
   requestFunction,

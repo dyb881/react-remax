@@ -2,13 +2,14 @@ import React, { useCallback } from 'react';
 import RefForm, { useForm as useFormSource } from 'rc-field-form';
 import { FormProps } from 'rc-field-form/es/Form';
 import { ValidateErrorEntity } from 'rc-field-form/es/interface';
+import { toast } from '../remax';
 
 /**
  * 表单组件
  */
 export const Form: React.FC<FormProps> = (props) => {
   const onFinishFailed = useCallback((errorInfo: ValidateErrorEntity) => {
-    // Toast.fail(errorInfo.errorFields[0].errors[0], 1);
+    toast.info(errorInfo.errorFields[0].errors[0], 1);
   }, []);
 
   return <RefForm onFinishFailed={onFinishFailed} {...props} />;

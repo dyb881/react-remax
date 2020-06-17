@@ -26,15 +26,20 @@ export {
 } from 'remax/one';
 
 export {
+  useQuery, // 获取页面参数
+  usePageInstance, // 获取当前页面组件实例子
+  useNativeEffect, // 小程序渲染完成
+} from 'remax';
+
+export * from './interactive_feedback'; // 交互反馈
+
+/*
+目前不支持直接导出，需要在对应页面文件内或 app.ts 上引用
+import {
   useAppEvent, // APP生命周期
   usePageEvent, // 页面生命周期
   createHostComponent, // 注册基础组件
   requirePlugin, // 引入插件方法
   requirePluginComponent, // 引入插件组件
 } from 'remax/macro';
-
-export {
-  useQuery, // 获取页面参数
-  usePageInstance, // 获取当前页面组件实例子
-  useNativeEffect, // 小程序渲染完成
-} from 'remax';
+*/

@@ -30,7 +30,7 @@ export const FormItem: React.FC<TFormItemProps> = ({
   children,
   rules = [],
   valuePropName,
-  fieldProps,
+  fieldProps = {},
   ...props
 }) => {
   // 隐藏表单项

@@ -1,5 +1,5 @@
 import { post } from './request';
 
-const user = {
+export const user = {
   login: () => post('/login', {}, '登录'),
 };

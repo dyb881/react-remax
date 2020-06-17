@@ -7,9 +7,9 @@ const store = observable({
   isLogin: false,
   onLogin: (bind: boolean | (() => void)) => {
     if (typeof bind === 'boolean') {
-      this.isLogin = bind;
+      store.isLogin = bind;
     } else {
-      when(() => this.isLogin, bind);
+      when(() => store.isLogin, bind);
     }
   },
 });
