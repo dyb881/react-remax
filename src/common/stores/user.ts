@@ -1,4 +1,4 @@
-import { observable, action, when } from 'mobx';
+import { observable, when } from 'mobx';
 
 /**
  * 用户

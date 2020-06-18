@@ -6,7 +6,8 @@ module.exports = {
   plugins: [
     less({
       lessOptions: {
-        globalVars: {
+        javascriptEnabled: true,
+        modifyVars: {
           'rr-p': '#1890ff', // 全局主色
           'rr-s': '#52c41a', // 成功色
           'rr-w': '#faad14', // 警告色
