@@ -1,4 +1,4 @@
-import { TFetchRequestConfig, TConfig } from '@dyb881/fetch-request';
+import { TFetchRequestConfig } from '@dyb881/fetch-request';
 import { requestFunction } from './function';
 import { toast } from '@/common';
 
