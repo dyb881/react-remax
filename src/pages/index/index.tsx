@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, useNativeEffect, confirm, alert } from '@/common';
+import { useNativeEffect } from 'remax';
+import { View } from 'remax/one';
+import { confirm, alert } from '@/common';
 import styles from './index.css';
 
 export default () => {
