@@ -2,7 +2,7 @@ import React from 'react';
 import { useNativeEffect } from 'remax';
 import { View } from 'remax/one';
 import { confirm, alert } from '@/common';
-import styles from './index.css';
+import styles from './index.less';
 
 export default () => {
   useNativeEffect(() => {
