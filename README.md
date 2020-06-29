@@ -8,7 +8,7 @@
 - 在 web 端可使用 antd-mobile，已配置按需加载
 - 请求器
 - Mobx 状态管理
-- taost / alert / confirm，常用交互反馈函数
+- taost / alert / confirm / 走马灯 常用交互反馈函数
 - rc-field-form 表单封装
 
 ## src 目录结构
