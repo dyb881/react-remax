@@ -4,8 +4,8 @@ import { getUpdateManager, confirm } from './common';
 import './app.less';
 
 const App: React.FC<any> = ({ children }) => {
-  useAppEvent('onLaunch', async () => {
-    if (getUpdateManager) {
+  if (process.env.REMAX_PLATFORM !== 'web') {
+    useAppEvent('onLaunch', async () => {
       // 版本监听更新
       const updateManager = getUpdateManager();
       updateManager.onUpdateReady(async () => {
@@ -13,8 +13,8 @@ const App: React.FC<any> = ({ children }) => {
         // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
         res && updateManager.applyUpdate();
       });
-    }
-  });
+    });
+  }
 
   return children;
 };

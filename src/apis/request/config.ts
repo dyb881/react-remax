@@ -1,6 +1,6 @@
-import { TFetchRequestConfig } from '@dyb881/fetch-request';
+import { TFetchRequestConfig, application } from '@dyb881/fetch-request';
 import { requestFunction } from './function';
-import { toast } from '@/common';
+import { toast, stores } from '@/common';
 
 /**
  * 是否生产环境
@@ -13,12 +13,12 @@ export const isProduction =
 /**
  * 生产地址
  */
-export let host = 'http://localhost';
+export let host = 'https://oilgw.cx580.com/cxy';
 
 /**
  * 测试地址
  */
-const hostTest = 'http://localhost';
+const hostTest = 'http://webtest.cx580.com:8666';
 
 /**
  * 会根据 isProduction 自行变动，需要配置对应的生产和测试地址
@@ -32,8 +32,17 @@ if (!isProduction) {
  */
 export const requestConfig: TFetchRequestConfig = {
   host, // API 地址
-  apiPath: '/api', // API 目录
+  apiPath: '/cxy/api', // API 目录
+  defaultConfig: {
+    headers: {
+      'content-type': application.form,
+    },
+  },
   interceptorsRequest: (config) => {
+    const { isLogin, token, userType } = stores.user;
+    if (isLogin) {
+      config.headers = { ...config.headers, token, userType };
+    }
     return config;
   },
   interceptorsResponse: (res, config) => {
@@ -61,3 +70,5 @@ export const successCodes = [0, '0', 200, 201, '0000', '1000', 1000, 1001, 1002,
  * 错误信息字段
  */
 export const messageKeys = ['msg', 'message', 'Message'];
+
+export const miniUrl = isProduction ? 'https://violation-mini.cx580.com' : 'https://test-violation-mini.cx580.com';

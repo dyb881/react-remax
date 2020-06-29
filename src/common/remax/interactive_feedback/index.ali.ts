@@ -1,10 +1,11 @@
-import { showToast, hideToast, showLoading, alert as aliAlert, confirm as aliConfirm } from 'remax/ali';
+import { showToast, hideToast, showLoading, hideLoading, alert as aliAlert, confirm as aliConfirm } from 'remax/ali';
 import { TToast, TAlert, TConfirm } from './types';
 
 export const toast: TToast = {
   info: (content, duration = 1) => showToast({ content, duration: duration * 1000 }),
-  loading: (content) => showLoading({ content }),
   hide: hideToast,
+  loading: (content) => showLoading({ content }),
+  hideLoading,
 };
 
 export const alert: TAlert = (title, content = '', text = '确定') => {

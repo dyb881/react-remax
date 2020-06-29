@@ -7,8 +7,9 @@
  */
 export type TToast = {
   info(content: string, duration?: number): void;
-  loading(content: string): void;
   hide(): void;
+  loading(content: string): void;
+  hideLoading(): void;
 };
 
 /**

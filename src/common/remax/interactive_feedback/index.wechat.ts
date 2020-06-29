@@ -1,10 +1,11 @@
-import { showToast, hideToast, showLoading, showModal } from 'remax/wechat';
+import { showToast, hideToast, showLoading, hideLoading, showModal } from 'remax/wechat';
 import { TToast, TAlert, TConfirm } from './types';
 
 export const toast: TToast = {
   info: (content, duration = 1) => showToast({ title: content, duration: duration * 1000, icon: 'none', mask: true }),
-  loading: (content) => showLoading({ title: content, mask: true }),
   hide: hideToast,
+  loading: (content) => showLoading({ title: content, mask: true }),
+  hideLoading,
 };
 
 export const alert: TAlert = async (title, content = '', text = '确定') => {

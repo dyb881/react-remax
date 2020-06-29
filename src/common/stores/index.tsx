@@ -1,11 +1,12 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import user from './user';
+import view from './view';
 
 /**
  * 全局状态
  */
-export const stores = { user };
+export const stores = { user, view };
 
 /**
  * 状态类型

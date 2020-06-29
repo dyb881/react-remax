@@ -3,8 +3,9 @@ import { TToast, TAlert, TConfirm } from './types';
 
 export const toast: TToast = {
   info: (content, duration = 1) => Toast.info(content, duration),
-  loading: (content) => Toast.loading(content, 0),
   hide: Toast.hide,
+  loading: (content) => Toast.loading(content, 0),
+  hideLoading: Toast.hide,
 };
 
 export const alert: TAlert = (title, content, text = '确定') => {

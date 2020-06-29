@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field } from 'rc-field-form';
 import { FieldProps } from 'rc-field-form/es/Field';
-import { Input } from '../remax';
+import { Input } from 'remax/one';
 import { isElement } from '../tool';
 
 export type TFormItemProps = Pick<FieldProps, 'name' | 'rules' | 'valuePropName'> & {

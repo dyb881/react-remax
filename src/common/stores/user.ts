@@ -9,7 +9,7 @@ const store = observable({
     if (typeof bind === 'boolean') {
       store.isLogin = bind;
     } else {
-      when(() => store.isLogin, bind);
+      return when(() => store.isLogin, bind);
     }
   },
 });

@@ -1,10 +1,11 @@
-import { showToast, hideToast, showLoading, showModal } from 'remax/toutiao';
+import { showToast, hideToast, showLoading, hideLoading, showModal } from 'remax/toutiao';
 import { TToast, TAlert, TConfirm } from './types';
 
 export const toast: TToast = {
   info: (content: string, duration = 1) => showToast({ title: content, duration: duration * 1000, icon: 'none' }),
-  loading: (content: string) => showLoading({ title: content }),
   hide: hideToast,
+  loading: (content: string) => showLoading({ title: content }),
+  hideLoading,
 };
 
 export const alert: TAlert = async (title, content = '', text = '确定') => {
