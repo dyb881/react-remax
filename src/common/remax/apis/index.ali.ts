@@ -1,12 +1,16 @@
-import { setNavigationBar, getSystemInfoSync } from 'remax/ali';
+import { setNavigationBar, getSystemInfoSync, makePhoneCall } from 'remax/ali';
 
 export const setTitle = (title: string) => setNavigationBar({ title });
 
 export const getPageInfo = () => {
-  const { screenWidth } = getSystemInfoSync();
+  const { windowWidth } = getSystemInfoSync();
   return {
-    width: screenWidth,
+    width: windowWidth,
   };
 };
 
 export { getUpdateManager } from 'remax/ali';
+
+export const call = (phoneNumber: string) => {
+  makePhoneCall({ number: phoneNumber });
+};

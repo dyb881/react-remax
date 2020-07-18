@@ -23,5 +23,10 @@ module.exports = {
         },
       },
     }),
+    {
+      configWebpack({ config }) {
+        process.env.NODE_ENV === 'production' && process.env.REMAX_PLATFORM === 'web' && config.output.publicPath('./');
+      },
+    },
   ],
 };

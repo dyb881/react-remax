@@ -14,6 +14,7 @@ export const Carousel: TCarousel = ({
   ...props
 }) => {
   const { width } = getPageInfo();
+
   const margin = `${getSize(width * (1 - slideWidth))}px`;
   return (
     <Swiper

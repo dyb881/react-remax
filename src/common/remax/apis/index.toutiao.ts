@@ -1,12 +1,16 @@
-import { setNavigationBarTitle, getSystemInfoSync } from 'remax/toutiao';
+import { setNavigationBarTitle, getSystemInfoSync, makePhoneCall } from 'remax/toutiao';
 
 export const setTitle = (title: string) => setNavigationBarTitle({ title });
 
 export const getPageInfo = () => {
-  const { screenWidth } = getSystemInfoSync();
+  const { windowWidth } = getSystemInfoSync();
   return {
-    width: screenWidth,
+    width: windowWidth,
   };
 };
 
 export { getUpdateManager } from 'remax/toutiao';
+
+export const call = (phoneNumber: string) => {
+  makePhoneCall({ phoneNumber: phoneNumber });
+};

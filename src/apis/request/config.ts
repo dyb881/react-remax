@@ -37,7 +37,7 @@ export const requestConfig: TFetchRequestConfig = {
     return config;
   },
   interceptorsResponse: (res, config) => {
-    res.ok || config.noToast || toast.info(res.errorText);
+    res.ok || config.noToast || setTimeout(() => toast.info(res.errorText));
     return res;
   },
   requestFunction,

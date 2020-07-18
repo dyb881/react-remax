@@ -1,5 +1,5 @@
 {
-  "miniprogramRoot": "dist/wechat",
+  "miniprogramRoot": "build/wechat",
   "setting": {
     "urlCheck": false,
     "es6": false,

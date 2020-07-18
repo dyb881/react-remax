@@ -1,12 +1,16 @@
-import { setNavigationBarTitle, getSystemInfoSync } from 'remax/wechat';
+import { setNavigationBarTitle, getSystemInfoSync, makePhoneCall } from 'remax/wechat';
 
 export const setTitle = (title: string) => setNavigationBarTitle({ title });
 
 export const getPageInfo = () => {
-  const { screenWidth } = getSystemInfoSync();
+  const { windowWidth } = getSystemInfoSync();
   return {
-    width: screenWidth,
+    width: windowWidth,
   };
 };
 
 export { getUpdateManager } from 'remax/wechat';
+
+export const call = (phoneNumber: string) => {
+  makePhoneCall({ phoneNumber });
+};

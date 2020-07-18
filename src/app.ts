@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAppEvent } from 'remax/macro';
 import { getUpdateManager, confirm } from './common';
 import './app.less';
@@ -14,6 +14,15 @@ const App: React.FC<any> = ({ children }) => {
         res && updateManager.applyUpdate();
       });
     });
+
+    // 显示的时候
+    useAppEvent('onShow', () => {
+      // 执行登录流程
+    });
+  } else {
+    useEffect(() => {
+      // 执行登录流程
+    }, []);
   }
 
   return children;
