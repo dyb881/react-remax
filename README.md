@@ -1,6 +1,6 @@
 # react-remax
 
-基于 remaxjs + Typescript 进行业务配置，兼容 web 和 三端小程序
+基于 remaxjs + Typescript 进行业务配置，兼容 web 和 三端(微信/阿里/头条)小程序
 
 ## 配置或封装的功能（跨平台使用）
 
