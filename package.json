@@ -12,23 +12,23 @@
     "build": "cross-env NODE_ENV=production remax build -t"
   },
   "dependencies": {
-    "@dyb881/fetch-request": "^0.5.3",
+    "@dyb881/fetch-request": "^0.5.5",
     "@remax/plugin-less": "^1.0.0",
     "antd-mobile": "^2.3.3",
     "babel-plugin-import": "^1.13.0",
-    "less": "^3.11.3",
+    "less": "^3.12.2",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "postcss-plugin-px2rem": "^0.8.1",
     "qs": "^6.9.4",
-    "rc-field-form": "^1.4.4",
+    "rc-field-form": "^1.8.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "remax": "^2.5.5"
+    "remax": "^2.7.3"
   },
   "devDependencies": {
-    "@types/react": "^16.9.38",
+    "@types/react": "^16.9.43",
     "cross-env": "^7.0.2",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.7"
   }
 }
