@@ -9,7 +9,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "remax build -w -t",
-    "build": "cross-env NODE_ENV=production remax build -t"
+    "build": "cross-env NODE_ENV=production remax build -t",
+    "serve": "serve build/web"
   },
   "dependencies": {
     "@dyb881/fetch-request": "^0.5.5",
@@ -20,7 +21,6 @@
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "postcss-plugin-px2rem": "^0.8.1",
-    "qs": "^6.9.4",
     "rc-field-form": "^1.8.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

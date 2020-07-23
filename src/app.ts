@@ -15,7 +15,6 @@ const App: React.FC<any> = ({ children }) => {
       });
     });
 
-    // 显示的时候
     useAppEvent('onShow', () => {
       // 执行登录流程
     });

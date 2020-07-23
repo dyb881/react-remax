@@ -1,7 +1,12 @@
 import React from 'react';
-import { View } from 'remax/one';
+import { View, Image } from 'remax/one';
+import { img } from '@/common';
 import styles from './index.less';
 
 export default () => {
-  return <View className={styles.app}>react-remax</View>;
+  return (
+    <View className={styles.page}>
+      <Image src={img('icon.png')} style={{ width: 200, height: 200 }} />
+    </View>
+  );
 };

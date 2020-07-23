@@ -17,7 +17,7 @@ export const useStates = <T extends object>(defaultStates: T) => {
   return { states, setStates };
 };
 
-let imagesPath = 'images/';
+let imagesPath = '';
 
 if (process.env.REMAX_PLATFORM !== 'web') imagesPath = `/${imagesPath}`;
 
