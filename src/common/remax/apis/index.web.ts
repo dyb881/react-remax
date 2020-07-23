@@ -1,9 +1,8 @@
-const ua = window.navigator.userAgent.toLowerCase();
-const isAli = ua.includes('alipayclient');
-
 export const setTitle = async (title: string) => {
   window.document.title = title;
-  if (isAli && AlipayJSBridge) AlipayJSBridge.call('setTitle', { title });
+  if (window.AlipayJSBridge) {
+    window.AlipayJSBridge.call('setTitle', { title });
+  }
 };
 
 export const getPageInfo = () => {
