@@ -32,7 +32,7 @@ if (!isProduction) {
  */
 export const requestConfig: TFetchRequestConfig = {
   host, // API 地址
-  apiPath: '/cxy/api', // API 目录
+  apiPath: '/api', // API 目录
   interceptorsRequest: (config) => {
     return config;
   },
