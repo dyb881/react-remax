@@ -19,15 +19,15 @@
     "babel-plugin-import": "^1.13.0",
     "less": "^3.12.2",
     "mobx": "^5.15.4",
-    "mobx-react": "^6.2.2",
+    "mobx-react": "^6.2.5",
     "postcss-plugin-px2rem": "^0.8.1",
-    "rc-field-form": "^1.8.0",
+    "rc-field-form": "^1.9.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "remax": "^2.7.3"
+    "remax": "^2.7.7"
   },
   "devDependencies": {
-    "@types/react": "^16.9.43",
+    "@types/react": "^16.9.44",
     "cross-env": "^7.0.2",
     "typescript": "^3.9.7"
   }

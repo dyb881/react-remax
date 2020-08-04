@@ -64,13 +64,18 @@ page {
   flex-direction: column;
 }
 
-// 根标签
-#root {
-  .fill;
-  overflow: hidden;
-  font-style: @rr-fs;
-  line-height: 1;
-  background-color: @rr-b;
+.page {
+  .column;
+  min-height: 100vh;
+  .overflow;
+
+  & > :not(.page-fill) {
+    flex-shrink: 0;
+  }
+
+  & > .page-fill {
+    flex: 1;
+  }
 }
 
 .transition {
