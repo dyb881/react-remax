@@ -27,7 +27,7 @@
     "remax": "^2.7.8"
   },
   "devDependencies": {
-    "@types/react": "^16.9.46",
+    "@types/react": "^16.9.47",
     "cross-env": "^7.0.2",
     "typescript": "^4.0.2"
   }
