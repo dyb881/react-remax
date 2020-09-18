@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 
 /**
  * 判断是否有效 react 组件
@@ -17,7 +17,20 @@ export const useStates = <T extends object>(defaultStates: T) => {
   return { states, setStates };
 };
 
-let imagesPath = '';
+/**
+ * 弹窗 hooks
+ */
+export const useModal = (defaultVisible?: boolean) => {
+  const [visible, setVisible] = useState(defaultVisible || false);
+
+  const show = useCallback(() => setVisible(true), []);
+  const hide = useCallback(() => setVisible(false), []);
+  const modalProps = { visible, onClose: hide };
+
+  return { show, hide, visible, modalProps };
+};
+
+let imagesPath = 'images/';
 
 if (process.env.REMAX_PLATFORM !== 'web') imagesPath = `/${imagesPath}`;
 
