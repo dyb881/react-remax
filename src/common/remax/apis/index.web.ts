@@ -1,8 +1,6 @@
 export const setTitle = async (title: string) => {
   window.document.title = title;
-  if (window.AlipayJSBridge) {
-    window.AlipayJSBridge.call('setTitle', { title });
-  }
+  window.AlipayJSBridge?.call('setTitle', { title });
 };
 
 export const getPageInfo = () => {
